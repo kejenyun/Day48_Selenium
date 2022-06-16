@@ -10,3 +10,7 @@ https://selenium-python.readthedocs.io/locating-elements.html#
 https://www.w3schools.com/xml/xpath_intro.asp
 
 to get Xpath --> right click to inspect, and right click the element, select copy> copy Xpath
+
+4. CSS
+.Class
+#ID

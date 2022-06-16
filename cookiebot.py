@@ -16,22 +16,17 @@ cookie = driver.find_element(By.ID, "cookie")
 timeout =time.time() +5*60 #5 min from now
 five_sec = time.time()+5 #5 sec
 
-# def buy_upgrade():
-#     upgrades = driver.find_elements(By.CSS_SELECTOR, f"#store :not(.grayed) b")
-#     for upgrade in upgrades:
-#         if "," not in upgrade.text:
-#             upgrades_price = int(upgrade.text.split('-')[1])
-#         else:
-#             upgrades_price = int(upgrade.text.split(" - ")[1].replace(",", ""))
-#         return upgrades_price
-#     index = upgrades_price.index(max(upgrades_price))
-#     upgrades[index].click()
-
 def buy_upgrade():
     upgrades = driver.find_elements(By.CSS_SELECTOR, f"#store :not(.grayed) b")
-    ##upgrades_price = [int(upgrade.text.split(" - ")[1]) if "," not in upgrade.text else int(upgrade.text.split(" - ")[1].replace(",", "")) for upgrade in driver.find_elements(By.CSS_SELECTOR, f"#store :not(.grayed) b")]
-    index = upgrades_price.index(max(upgrades_price))
-    upgrades[index].click()
+    upgrades_price =[]
+    for upgrade in upgrades:
+        if "," not in upgrade.text:
+            upgrades_price.append(int(upgrade.text.split('-')[1]))
+        else:
+            upgrades_price.append(int(upgrade.text.split(" - ")[1].replace(",", "")))
+
+        index = upgrades_price.index(max(upgrades_price))
+        upgrades[index].click()
 
 
 while time.time() < timeout:
