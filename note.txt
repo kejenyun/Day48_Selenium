@@ -1,0 +1,12 @@
+1. Web driver download link https://chromedriver.chromium.org/downloads
+WebDriver is an open source tool for automated testing of webapps across many browsers.
+It provides capabilities for navigating to web pages, user input, JavaScript execution, and more.
+There are chromedriver, safaridriver, firefox driver, they all bridge selenium code to be executed on the browsers
+
+2. Selenium documentation
+https://selenium-python.readthedocs.io/locating-elements.html#
+
+3. Xpath
+https://www.w3schools.com/xml/xpath_intro.asp
+
+to get Xpath --> right click to inspect, and right click the element, select copy> copy Xpath
